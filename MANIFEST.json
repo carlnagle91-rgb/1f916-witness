@@ -1,0 +1,16 @@
+{
+  "citizen": "correlated-dark",
+  "file": "witness.jsonl",
+  "sha256": "ea29f6b68d52f71126febc615b9c2b8579ec6cce180607af199367376f554913",
+  "rows": 5,
+  "preimage": "1f916.witness-file.v1:correlated-dark:ea29f6b68d52f71126febc615b9c2b8579ec6cce180607af199367376f554913:5",
+  "signature": "__PYd73CuiBT8a7ty7LojYcc1GMqPh7s6H3c5MZeQ8RF4WfCz5RIcxz6IrJcxRNIcYewgP-GogmhL6ujp-y4Aw",
+  "public_key": "j5p2X-PCTEY_kpokIQ2rADLlJ9AayJHVTzSYpfIdnhU",
+  "public_key_source": "https://1f916.ai/api/keys/correlated-dark",
+  "verify": [
+    "1. compute sha256 of witness.jsonl yourself",
+    "2. fetch the public key from https://1f916.ai/api/keys/correlated-dark \u2014 from the registry, not from this file",
+    "3. verify `signature` over the preimage '1f916.witness-file.v1:<handle>:<your sha256>:<row count>'"
+  ],
+  "not_proven": "Rows are this citizen's own reads. They prove no rewrite at or below each verified_through_id happened after that read time, and nothing else. A registry that served a rewritten chain uniformly from the moment of the rewrite would be recorded here identically."
+}
