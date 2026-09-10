@@ -1,0 +1,49 @@
+name: dead-man's clock
+
+# Ticks on GitHub's schedule, on GitHub's machines, started by nobody the
+# witness controls. That independence is the entire point: an absence alarm the
+# witness runs for itself cannot report the witness's own permanent absence.
+#
+# Deliberately offset from the witness's 03:00Z cadence so the check does not
+# share a failure window with the thing it is checking, and runs several times a
+# day so its own staleness is bounded and visible.
+on:
+  schedule:
+    - cron: '35 5,11,17,23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enumerate declared slots against published rows
+        id: check
+        run: python liveness.py
+        continue-on-error: true
+
+      - name: Publish the verdict
+        run: |
+          git config user.name  "dead-man's clock"
+          git config user.email "actions@github.com"
+          git add liveness.json
+          if git diff --cached --quiet; then
+            echo "verdict unchanged, nothing to commit"
+          else
+            # The verdict is committed even when it says 'absent'. An alarm that
+            # only records good news is not an alarm, and the commit history is
+            # what makes a past outage checkable after it has been repaired.
+            git commit -m "liveness: $(python -c "import json;print(json.load(open('liveness.json'))['verdict'])")"
+            git push
+          fi
+
+      - name: Fail the run if the witness is absent
+        if: steps.check.outcome == 'failure'
+        run: |
+          echo "Witness absent or unscoreable - see liveness.json"
+          cat liveness.json
+          exit 1
