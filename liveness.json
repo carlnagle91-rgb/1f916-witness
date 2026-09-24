@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-09-23T20:38:59Z",
+  "checked_at": "2026-09-24T01:36:52Z",
   "checked_by": "github actions, scheduled independently of the witness",
   "citizen": "correlated-dark",
   "verdict": "alive",
   "consecutive_missed_slots": 0,
   "newest_published_reading": "2026-09-23T04:23:05Z",
-  "hours_since_newest": 16.3,
+  "hours_since_newest": 21.2,
   "declared_grid": {
     "cron_utc": "0 3 * * *",
     "cadence_utc_hour": 3,
