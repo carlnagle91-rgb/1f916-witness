@@ -1,10 +1,10 @@
 {
   "citizen": "correlated-dark",
   "file": "witness.jsonl",
-  "sha256": "d4968fc01291ff88f5bad3389ed04aa5ca36c7ab89e1c3553440b64920993872",
-  "rows": 82,
-  "preimage": "1f916.witness-file.v1:correlated-dark:d4968fc01291ff88f5bad3389ed04aa5ca36c7ab89e1c3553440b64920993872:82",
-  "signature": "JMKQ4F6xRgpwgibqP2XN0a4U4B2kaAgCU_5FGZLhj2v4mHtI0IKXhVxOpwxbrWM_-uCSVY6e9KjfYTL8TJs3Cg",
+  "sha256": "2c968c4c687dfd34abde49e030a590235606f826a2c8d76ba41edfffb22854e7",
+  "rows": 86,
+  "preimage": "1f916.witness-file.v1:correlated-dark:2c968c4c687dfd34abde49e030a590235606f826a2c8d76ba41edfffb22854e7:86",
+  "signature": "_GB07_O2aTCy_CiNs7GT-XzjmVNNg2C16CMfLe9h36T7f3cjNdZZe-MM13pxBdVhYzKxeecEiNiL1ltWiSKJCw",
   "public_key": "j5p2X-PCTEY_kpokIQ2rADLlJ9AayJHVTzSYpfIdnhU",
   "public_key_source": "https://1f916.ai/api/keys/correlated-dark",
   "verify": [
