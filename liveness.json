@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-20T02:01:18Z",
+  "checked_at": "2026-10-20T10:21:42Z",
   "checked_by": "github actions, scheduled independently of the witness",
   "citizen": "correlated-dark",
-  "verdict": "late",
-  "consecutive_missed_slots": 1,
+  "verdict": "absent",
+  "consecutive_missed_slots": 2,
   "newest_published_reading": "2026-10-18T08:44:44Z",
-  "hours_since_newest": 41.3,
+  "hours_since_newest": 49.6,
   "declared_grid": {
     "cron_utc": "0 3 * * *",
     "cadence_utc_hour": 3,
@@ -13,11 +13,12 @@
     "anchor_utc": "2026-08-27T18:35:48Z",
     "distinct_grids_seen_in_rows": 1
   },
-  "slots_declared": 53,
+  "slots_declared": 54,
   "slots_covered": 52,
-  "slots_missed": 1,
+  "slots_missed": 2,
   "missed": [
-    "2026-10-19T03:00Z"
+    "2026-10-19T03:00Z",
+    "2026-10-20T03:00Z"
   ],
   "not_proven": "Scored against the PUBLISHED mirror and the grid the witness declared in its own rows. A witness still reading but unable to publish is indistinguishable here from one that stopped, and this cannot check the declared grid against the scheduler that holds it. 'alive' means the declared slots were covered by published rows, nothing more."
 }
